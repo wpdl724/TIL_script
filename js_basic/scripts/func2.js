@@ -28,7 +28,7 @@
 //console.log(g+d);//결과값 -> 에러 , 결과값 40
 //console.log(d+e);//결과값 -> ok ,결과값 5+15=20
 
-console.log(`--------------------------------------------연습2`)
+/* console.log(`--------------------------------------------연습2`)
 let x = 1; // 전역변수
 let y; //y를   '전역변수'로 만든다. 
 function func1() { //함수 대기상태 func1
@@ -42,8 +42,8 @@ function func2(){ //함수 대기 상태 func2
     console.log(x+y+z); //x는 전역이여서 문제 없음 ,y는 func1의 지역변수 이여서 안됨 ,z는 func2의 지역변수이다. 결론은 에러 난다. 그래서 func1을 func2 에 호출해야 위에 y값을 불러올수 있음 
 }
 func2(); // func2 대기상태인것을 호출하고 싶으면 블록 밖에서 호출을 해야 결과값이 나온다 //결과값 -> 16
-
-console.log(`------------------------------------------헨젤과 그레텔 알고리즘`)
+ */
+/* console.log(`------------------------------------------헨젤과 그레텔 알고리즘`)
 function stroyFunc1(){
     let person = ['헨젤', '그레텔'];
     let src = '조약돌';
@@ -57,9 +57,9 @@ function stroyFunc2(){
     console.log(`${person[0]}과${person[1]}이 ${src}를 이용해서 집을 찾아갔습니다`);
 }
 stroyFunc1(); // 함수 호출! 
-stroyFunc2(); // 함수 호출! 
+stroyFunc2(); // 함수 호출!  */
 
-console.log(`------------------------------------------헨젤과 그레텔 알고리즘 - 매개변수`)
+/* console.log(`------------------------------------------헨젤과 그레텔 알고리즘 - 매개변수`)
 function stroyFunc(src){ //여기서 src -> '생성' 
     let person = ['헨젤', '그레텔'];
     //let src = '빵부스러기'; 
@@ -85,9 +85,9 @@ function coffeeFunc1(data1=1, data2=0.5){ //매개변수명 생성 (2개이상�
 }
 coffeeFunc1(2,1);
 coffeeFunc1(3,0.5);
-coffeeFunc1(); //기본값 설정
+coffeeFunc1(); //기본값 설정 */
 
-console.log(`------------------------------------------커피 레시피 연습 2(기본값 포함)`)
+/* console.log(`------------------------------------------커피 레시피 연습 2(기본값 포함)`)
 // Q. 함수 1개로 만들어보기 
 //문제1) 카페라떼 1잔 주문완료되었습니다 // 매개변수는 2개이다 
 //문제2) 아메리카노 2잔 주문완료되었습니다
@@ -115,9 +115,9 @@ function coffeeKiosk2 (hotIce=['따뜻한','차가운'],menu1,num1=1){
 coffeeKiosk2(0,'카페라떼',2);
 coffeeKiosk2(1,'아메리카노');
 coffeeKiosk2(0,'녹차라떼',2);
-coffeeKiosk2(1,'아메리카노');
+coffeeKiosk2(1,'아메리카노'); */
 
-console.log(`------------------------------------------함수의 리턴(return)`)
+/* console.log(`------------------------------------------함수의 리턴(return)`)
 // 더하기 알고리즘
 // 함수 내부 {}는 대기장소로 호출하지 않는 한 절대 실행되지 않는다. 
 // 함수 외부는 {}가 끝난 위치로 함수를 호출해서 실행 할수 있는 위치다
@@ -129,9 +129,9 @@ function plusFunc(num){ //대기 장소
 }
 plusFunc(2); //함수 호출
 // 호출할때  return이 보낸 반환값을 묶어주는 실행함수를 별도로 작성한다
-console.log(plusFunc(2));
+console.log(plusFunc(2)); */
 
-console.log(`------------------------------------------함수의 리턴(return) 구구단 알고리즘`)
+/* console.log(`------------------------------------------함수의 리턴(return) 구구단 알고리즘`)
 //문제 ) 1~9까지 식을 한번에 내보내주기 
 let dan99 =''; //전역변수 (초기값) 앞으로 문자데이터가 들어올 예정으로 빈문자 초기값으로 설정한것이다// 여기다가 초기값을 작성하는 것이다 -> 초기값이 숫자면 0 문자면 
 function dan99Func(num){
@@ -144,21 +144,21 @@ function dan99Func(num){
     dan99 +=`${num}x7=${num*7} ` 
     dan99 +=`${num}x8=${num*8} ` 
     dan99 +=`${num}x9=${num*9}` 
-    return dan99; // 아무것도 안보이는 이유는 값만 작성해서 그런것 (외부로 보내라는 것이지 실행하라는 것은 아님)
-}
-dan99Func(2); // 구구단 2단  -> 매개변수를 받을 변수를 준비하는 과정이다 .
-console.log(dan99Func(2)); //호출
-console.log(dan99Func(7)); //호출
+    return dan99;  // 아무것도 안보이는 이유는 값만 작성해서 그런것 (외부로 보내라는 것이지 실행하라는 것은 아님)
+}*/
+//dan99Func(2); // 구구단 2단  -> 매개변수를 받을 변수를 준비하는 과정이다 .
+//console.log(dan99Func(2)); //호출
+//console.log(dan99Func(7)); //호출
 
-console.log(`------------------------------------------함수의 리턴(return) 할인율 계산기`)
+//console.log(`------------------------------------------함수의 리턴(return) 할인율 계산기`)
 //27500원을 입력했을때 (가격은 달라질 수 있음)
 //입력한 가격에 대한 5%, 10%, 20%, 30%, 40%, 50% 할인율을 동시에 출력해라.
 // 10% 할일율 계산법 : 가격 * 09
 // 4% 할일율 계산법 : 100-4 = 96 -> 가격 * 0.96
 //결과 예시 ) 5% 할인율 결과 : ???원
-let discountResult = ''; // 기본값 설정 (빈문자)
-function discount (price){
-    discountResult = `5% 할인율 결과 : ${price * 0.95}원`
+//let discountResult = ''; // 기본값 설정 (빈문자)
+//function discount (price){
+   /*  discountResult = `5% 할인율 결과 : ${price * 0.95}원`
     discountResult += `10% 할인율 결과 : ${price * 0.9}원 `
     discountResult += `20% 할인율 결과 : ${price * 0.8}원 `
     discountResult += `30% 할인율 결과 : ${price * 0.7}원 `
@@ -167,4 +167,37 @@ function discount (price){
     return discountResult;
 }
 discount(27500);
-console.log(discount(27500));
+console.log(discount(27500)); */
+
+console.log (`=================익명함수`);
+//익명함수란? 변수 내 function 키워드를 지정해 대입하는 함수
+// 함수 자체의 이름이 아닌 변수 이름에 의존해서 할당되기 때문에 익명함수라고 부른다.
+//function greeting(){} // 일반함수
+const greeting = function(){
+    console.log(`hello`);
+} // 익명함수
+greeting(); //익명함수를 호출할때는 함수명이 아닌 변수명으로 호출한다
+//익명함수는 일반함수와 다르게 함수선언보다 먼저 호출하면 오류가 발생한다.
+
+console.log (`=================화살표 함수`);
+// 화살표함수는 일반함수가 아닌 익명 함수일때 함수를 간결하게 줄이는 목적으로 사용한다.
+//function을 => 기호로 바꿔서 사용한다
+//대입연산다(=)와 화살표 함수(=>)를 붙여서 사용할수 없기 때문에 매개변수와 함수선언표시 순서를 바꿔서 =()=>로 사용한다
+//일반함수 경우
+function bab(num){
+    return '밥'+num+'공기 주세요';
+}
+console.log(bab(1))
+//화살표함수(익명함수) 경우
+const bab2 = (num) => {return '밥'+num+'공기 주세요'};
+console.log(bab2(2));
+// 함수 호출 할 때마다 아래와 같은 결과 출력하기 (매개변수 활용)
+//밥 주세요
+//반찬 주세요
+//국 주세요
+const bab3 = (menu) => {return menu+'주세요'};
+console.log(bab3('밥'));
+console.log(bab3('반찬'));
+console.log(bab3('국'));
+//const 변수 = (매개변수) => {return 함수반환값}
+//변수() // 익명함수호출식
