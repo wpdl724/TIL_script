@@ -76,3 +76,76 @@ function blurBgWhite(){
 function loadMsg(){
     return alert('문서 로딩 완료')
 }
+
+console.log(`===================== 이벤트와 콜백 함수`);
+// 객 체-> 이름 -> 함수 
+const googleJoin = document.querySelector('.google_join');
+//자바스크립트에 작성하는 객체 이벤트 문법
+// 객체.addEventListener('이벤트' 콜백함수);
+//addEventListener이벤트 작성시 'on' 없이 이벤트만 작성한다.
+googleJoin.addEventListener('click',googleGo );
+function googleGo(){
+    return window.open('https://accounts.google.com','_blank');
+}
+
+console.log(`===================== 이벤트와 콜백 함수 - 네이버 , 카카오`);
+const naverJoin = document.querySelector('.naver_join');
+const kakaoJoin = document.querySelector('.kakao_join');
+kakaoJoin.addEventListener('click',kakaoGo);
+naverJoin.addEventListener('click',naverGo);
+function naverGo(){
+    return window.open('https://nid.naver.com', '_blank');
+}
+function kakaoGo(){
+    return window.open('https://accounts.kakao.com')
+}
+
+console.log(`===================== 이벤트와 콜백 함수 - 현재 페이지 변경방법`);
+//1. 객체
+const fileLink = document.querySelector('.file_link');
+console.log(fileLink);
+// 2. 이벤트
+fileLink.addEventListener('click',link0520);
+// 3. 함수
+//Js에서 상대경로 연결시 js파일 기준이 아닌 js 가 연결된 html파일이 저장된  위치를 기준으로 상대 경로를 작성한다
+function link0520 (){
+    return window.location.href='../bom1.html'; //상대주소 html 기준으로 
+}
+console.log(`===================== 이벤트와 콜백 함수 -현재 창에서 변경`);
+const indexLink = document.querySelector('.index_link');
+const readmeLink = document.querySelector('.readme_link');
+console.log(indexLink,readmeLink);
+indexLink.addEventListener('click',linkIndex); // click  , 함수의 이름을 적는것 
+readmeLink.addEventListener('click',readmeGo);
+function linkIndex (){
+    return window.location.href= 'index.html';
+}
+function readmeGo (){
+    return window.location.href = '../README.md';
+}
+/* 상품 수량 증가 알고리즘  */
+// 1. 수량 초기값 1
+const numBtn =  document.querySelector('#num_btn');
+const numInput = document.querySelector('input[name=num]') //class가 없으니깐 input 속성선택자 넣기
+console.log(numInput,numBtn);
+numInput.value = 1;// 초기값이므로 이벤트 없이 바로 작성 
+
+// 2. +버튼 클릭시 수량이 1씩 증가해야 한다
+numBtn.addEventListener('click',numPlus);
+function numPlus(){
+    //수량이 1씩 증가한다
+    //기존의 input 값이 항상 1증가 해야한다  -> 기존 input의 값 numInput 이다
+    // 1. 증감연산자 활용
+    //return numInput.value = ++numInput.value; // 계속 2로 머물러있다
+    // 2. 더하기 연산자와 형변환 메서드 활용법
+    console.log(typeof numInput.value);
+    return numInput.value =  Number(numInput.value)+1;
+}
+//빼기 연습 
+const numBtnMinus = document.querySelector('#num_btn_minus'); 
+console.log(numBtnMinus);
+numBtnMinus.addEventListener('click',numMinus); // -`버튼 클릭시
+function numMinus(){ // 클릭할때 부르려고 썼다 함수 이름작성 
+    // 수량이 1씩 감소해야한다
+    return numInput.value = Number(numInput.value)-1;
+}
