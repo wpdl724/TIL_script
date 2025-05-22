@@ -1,0 +1,42 @@
+/* insta.css */
+body, html{background-color: #95efbd; padding: 0 10px;}
+main{
+    background-color: #fff;
+    max-width: 420px; min-width: 320px; margin:50px auto 0;
+}
+main .top{
+    display: flex; justify-content: space-between; padding: 10px;
+}/* flex 는 부모에게 줘야한다 */
+main .top .profile{
+    display: flex; align-items: center;/* 닉네임+인증 위치 맞춤*/
+}
+main .top .profile .photo{
+    border-radius: 50%;
+    width: 25px; height: 25px;
+    background:url(https://images.unsplash.com/photo-1500835556837-99ac94a94552?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsfGVufDB8fDB8fHww) center / cover;
+} /* 인라인이여서 보이지 않음 */
+main .top .profile .em{margin:0 4px; font-weight: 600; font-size: 0.875rem;}
+main .top .profile .cerified{color: #14ce66; font-size: 0.75rem;}
+main .top #top_menu{font-size: 0.75rem;}
+main .photo{}
+main .photo img{width: 100%;}
+main .menu{display: flex; justify-content: space-between; padding: 10px;}
+main .menu .left{display: flex;} /* flex쓴이유? 크기 적용되게 하려고 작성 + 옆으로 보내기위해서 */
+main .menu .left > * {width: 24px;} /* 이미지에는 너비 100을쓰고 left에 24px을 썼는지? -> 형제한테 설정값을 주려고 작성한것 (부모를 따라가게 만드는 것- 나중에 반응형 제작할때 관리하기 쉽다)  */
+main .menu .left img{width: 100%;}/* img 공통선택자 */
+main .menu .left .like{}
+main .menu .left .like img{}
+main .menu .left .comment{margin: 0 12px;}
+main .menu .left .comment img{}
+main .menu .left .share{}
+main .menu .left .share img{}
+main .right_save{}
+main .right_save img{}
+main .content{padding: 10px;}
+main .content .story{}
+main .content .tag{margin:14px 0;}
+main .content .tag span{
+    background-color: #f5f5f5; color:#146ece; 
+    font-size: 0.75rem;
+}
+main .content .date{}
