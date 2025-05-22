@@ -42,9 +42,9 @@ function tagShow(){
 }
 
 // 10.해시태그 터치시 해당 태그 사용 게시글 페이지 이동 0
-const content = document.querySelector('.content');
+const tag = document.querySelector('.tag');
 console.log(tag);
-content.addEventListener('click',tagGo);
+tag.addEventListener('click',tagGo);
 function tagGo(){
     return window.location.href = 'insta_tag.html'
 }
