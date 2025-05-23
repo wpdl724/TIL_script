@@ -25,5 +25,8 @@
 * `let genderChk = document.querySelector('input[name=gender]');`
 ## a태그 기본 이벤트 동작 취소
 * `a`태그를 클릭 이벤트 객체로 사용시 대상을 터치 또는 클릭하면 화면 세로 스크롤이 최상단으로 올라가는 문제점이 발생한다.
-* (예) `a객체.addEventListener('click',function(e){ e.preventDefault(); })`
-* (예) `a객체.addEventListener('click',(e)=>e.preventDefault())`
+* (예) `a객체.addEventListener('click',function(e){ e.preventDefault(); })` <!-- 익명함수 -->
+* (예) `a객체.addEventListener('click',(e)=>e.preventDefault())` <!-- 화살표함수 -->
+## 태그(DOM)에 따른 속성 값 읽기/수정/삭제 JS속성
+* `input` 요소일 경우 값 읽기/수정/삭제는 `value` 속성사용
+* `input`이 아닌 다른 요소일경우 값 읽기/수정/삭제 `textContent` 또는 `innerHTML` 속성 사용
