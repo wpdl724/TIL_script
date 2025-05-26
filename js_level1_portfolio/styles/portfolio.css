@@ -1,8 +1,47 @@
 body, html {}
-main{}
-main .design{}
-main .design a{}
-main .design a img{}
-main .popup_bg{}
-main .popup_bg .contents{}
-main .popup_bg .contents img{}
+main {
+    background-color: #f5f5f5;
+    padding:50px 0; 
+    /* max-content 내용만큼 */
+}
+main .design {
+    width: 1400px;
+    margin: 0 auto;
+    background-color: blueviolet;
+    display: flex;
+    flex-flow: row wrap; /* 한줄로만 보겠다 / 줄바꿈안함  => nowrap  , */
+} 
+main .design a:nth-child(4n) {margin-right: 0;} /* 4의 배수로 설정한다 */
+main .design a {
+    /* width: 25%; 상대처리 하기 (100/4=25) =>  옆으로 4개가 보이게 하기위해서 설정*/
+    width: calc((100% - (20px * 3)) / 4);
+    margin-right: 20px; margin-bottom: 20px;
+    height: 200px; overflow: hidden;
+    border: 3px solid red; 
+}
+main .design a img { 
+    width: 200%; /* 상대처리하기  */
+    transform: translate(-25%, -10%);/* - 마이너스 값을 키울수록 위치는 오른쪽 아래로 내려간다. */
+}
+main .popup_bg {}
+main .popup_bg .contents {}
+main .popup_bg .contents img {}
+
+/* 클릭시 실행 팝업 */
+.popup_bg {/* 뒤에 배경 회색부분 */
+    position: fixed; left: 0; top:0; /* position: fixed; 작성하면 무조건 좌표를 작성해야한다. */
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+} 
+.popup_bg .contents { /* 팝업 하얀 박스 */
+    background: #ffff;
+    width: 600px; margin: 0 auto;
+    height: 80vh; overflow: auto; 
+    padding: 50px;
+    border-radius: 2%;
+}
+.popup_bg .contents img {
+    width: 100%; /* 컨텐츠 박스 크기 설정 */
+}
