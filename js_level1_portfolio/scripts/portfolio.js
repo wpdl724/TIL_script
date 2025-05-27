@@ -16,25 +16,27 @@ console.log(popupBg,thumbNailA);
 popupBg.style.display = 'none';
 //변수로 만든 DOM요소가 여러개일 경우 이벤트를 위해 접근할때는 인덱스를 사용해서 하나씩 개별 접근해야한다.
 thumbNailA[0].addEventListener('click',function(){
-    console.log(0); // 작동테스트
-    console.log(this); // 이벤트 객체 자동인식하는지 확인하기
+    console.log(0); // 작동테스트 -> 클릭할때 익명함수가 작동되는지 테스트한다
+    console.log(this); // 이벤트 객체 자동인식하는지 확인하기 -> this 는 섬네일a를 가르킨다
     console.log(this.children[0].src); 
     console.log(popupBg.children[0].children[0].src); //popupBg의 자식의 자식의 src확인하기
-    popupShow(); // 팝업 출력함수 호출
+    popupShow(this); // 팝업 출력함수 호출
     popupBg.children[0].children[0].src =this.children[0].src
 });
 thumbNailA[1].addEventListener('click',function(){
-    console.log(0); // 작동테스트
-    console.log(this); // 이벤트 객체 자동인식하는지 확인하기
-    console.log(this.children[0].src); 
-    console.log(popupBg.children[0].children[0].src); //popupBg의 자식의 자식의 src확인하기
-    popupShow(); // 팝업 출력함수 호출
-    popupBg.children[0].children[0].src =this.children[0].src
+    popupShow(this); // 팝업 출력함수 호출
 });
-thumbNailA[1].addEventListener('click',popupShow);
-thumbNailA[2].addEventListener('click',popupShow);
-function popupShow(){
-    return popupBg.style.display='flex';
+thumbNailA[2].addEventListener('click',function(){
+    popupShow(this); // 팝업 출력함수 호출
+});
+/* thumbNailA[1].addEventListener('click',popupShow);
+thumbNailA[2].addEventListener('click',popupShow); */
+function popupShow(target){
+    console.log(`-------------------함수 시작 위치와 에러 체크`);
+    console.log(popupBg.children[0].children[0]); //정상 체크
+    popupBg.style.display='flex';
+    popupBg.children[0].children[0].src =target.children[0].src; //이부분이 문제
+    return; // 함수 종료
 }
 //배경클릭시 팝업 숨기기
 popupBg.addEventListener('click',popupHide);
