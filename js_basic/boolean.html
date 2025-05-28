@@ -48,9 +48,79 @@
         if(null){
             console.log('조건이 참일때 실행되는 문구')
         }
+        console.log(`================================= 5/28 조건문 공부 `);
+        //if(조건식){조건식 결과가 참일 때 실행되는 스크립트}
+        //const userId = prompt('아이디를 입력하세요');
+        /*if(userId){
+            alert(userId+'님 안녕하세요');
+        }*/
+        // 관리자 아이디 : admin 이다
+        // 관리자만 인식해서 인사하는 조건 알고리즘
+        /* if(userId == 'admin'){ 
+            alert('관리자님 어서오세요.');
+        } */
+        //관리자가 아닌 사람이 접속하면 일반 사용자로 판단해서 인사하는 알고리즘
+        //'회원님 안녕하세요' 라고 나타나야 한다
+        /* if(userId != 'admin'){
+            alert('회원님 어서오세요');
+        } */
     </script>
 </head>
 <body>
-    
+    <div id="join">
+        <input type="text" name="user_id" placeholder="아이디를 입력하세요.">
+        <button type="button" id="id_overlap_btn">아이디 중복확인</button>
+        <p class="overlap_error_msg"><!-- 오류메세지 출력위치 --></p>
+    </div>
+    <!-- 
+    관리자와 동일한 아이디를 할수 없는 아이디 중복확인 알고리즘
+    1. 사용자가 아이디를 입력했다.
+    2. 아이디 중복확인 버튼을 클릭했다.
+    3. 만약 사용자가 입력한 아이디가 'admin'이라면 
+    4. 오류 메세지가 출력된다. => "사용 중인 아이디 입니다. 다른 아이디를 입력하세요." 
+    -->
+    <div class="print">
+        <input type="number" value="1" class="page_num">
+        <button type="button" id="print_btn">인쇄</button>
+        <!-- 
+        2장이상 입력후 인쇄버튼 클릭시 인쇄 가능 window.print() 사용하기
+        그 이하 일 경우 '최소 2장 이상부터 인쇄가 가능합니다.' 라고 메세지 출력
+        -->
+    </div>
+    <script>
+        //관리자와 동일한 아이디를 할수 없는 아이디 중복확인 알고리즘
+        console.log(`============================ 아이디 중복확인연습 `);
+        const userId = document.querySelector('input[name=user_id]');
+        const idOverlapBtn = document.querySelector('#id_overlap_btn');
+        const overlapMsg = document.querySelector('.overlap_error_msg');
+        console.log(userId, idOverlapBtn, overlapMsg);
+
+        idOverlapBtn.addEventListener('click',idChk); // 해석)클릭할때 아이디 체크하는 함수를 체크하겠다.
+        function idChk(){
+            console.log(userId.value);
+            if(userId.value == 'admin'){
+                return overlapMsg.textContent = '사용 중인 아이디 입니다. 다른 아이디를 입력하세요.'
+            }
+            //아이디를 입력하지 않았을때 
+            if(userId.value == ''){
+                return overlapMsg.textContent = '아이디를 입력되지 않았습니다. 아이디를 입력하세요'
+            }
+        }
+        //프린트 알고리즘 
+        const pageNum = document.querySelector('input[type=number]');
+        const printBtn = document.querySelector('#print_btn');
+        console.log(pageNum,printBtn);
+        //버튼 클릭시 
+        printBtn.addEventListener('click',printChk);
+        function printChk (){
+            //console.log(0); // 함수 확인 테스트
+            if(pageNum.value >= 2){
+                return window.print();// 함수 확인 테스트
+            }
+            if(pageNum.value <= 1) {
+                return window.alert('최소 2장 이상부터 인쇄가 가능합니다.')
+            }
+        }
+    </script>
 </body>
 </html>
