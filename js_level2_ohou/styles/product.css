@@ -1,3 +1,4 @@
+body, html {scroll-behavior: smooth;}
 main {
     background-color: aqua;
     width: 995px; margin: 0 auto;
@@ -108,3 +109,19 @@ main section .right_order .btn_group #buy_btn{
     background-color: #59AFFF;
     color: #fff;
 }
+main .info {height: 100vh;}
+main #review {height: 100vh; background-color: crimson;}
+main .board {height: 100vh;}
+
+/* JS에서 select 클릭시 출력되는 영역 시작 */
+main .order_select {}
+main .order_select .list {
+    background-color: purple;
+}
+main .order_select .close {}
+main .order_select .order_num {}
+main .order_select .order_num #minus {}
+main .order_select .order_num #plus {}
+main .order_select .price {}
+main .order_select .price em{}
+
