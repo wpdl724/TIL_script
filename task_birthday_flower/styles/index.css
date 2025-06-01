@@ -1,0 +1,21 @@
+/*index.css */
+main {
+    background: url(https://img.freepik.com/free-photo/different-colorful-flowers-wooden-table_23-2147697807.jpg?uid=R193153597&ga=GA1.1.946373219.1747923492&semt=ais_items_boosted&w=740) no-repeat 0 / cover;
+    max-width: 480px; min-width: 320px; height: 100vh;
+}
+main .container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+main .container p {text-align: center; padding: 50px 0;}
+main .container .user_birth_option {
+    display: flex; justify-content:center;
+}
+main .container .user_birth_option p input {}
+main .container .user_birth_option p input[name=birth_year] {width: 100px;}
+main .container .user_birth_option p input[name=birth_month] {width: 70px;}
+main .container .user_birth_option p input[name=birth_day] {width: 70px;}
+main .container button {}
+main .container button[name=submit_btn] {}
+main .container #result_btn  {}
