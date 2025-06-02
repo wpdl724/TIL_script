@@ -1,4 +1,3 @@
-//index.js
 const birthday_flower = [
     {
         month:1,
