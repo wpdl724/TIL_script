@@ -1,0 +1,75 @@
+body, html {background-color: #f5f5f5;}
+main {
+    max-width: 1024px; min-width: 320px; margin: 0 auto;
+    border: 5px solid red;
+    padding-top: 24px; /* 윗쪽 여백 설정 - 부모와 자식사이에 여백을 준다 */
+}
+main .back {
+    float: left;
+}
+main .lang_group {
+    float: right;
+    position: relative;
+}
+main .lang_group #lang_select {}
+main .lang_group .lang_open{ 
+    position: absolute; right: 0; background-color: #fff;
+    border: 1px solid #ddd; box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: max-content; padding: 12px;
+    display: flex; flex-flow: column nowrap;
+    
+
+}
+main .lang_group .lang_open a {font-size: 0.85rem; line-height: 2;}
+main .lang_group .lang_open .kr{}
+main .lang_group .lang_open .en{}
+main .lang_group .lang_open .ch1{}
+main .lang_group .lang_open .ch2{}
+
+main .login_wrap {
+    max-width: 400px; margin: 0 auto;
+    border: 5px solid blue;
+    clear: both; /* 내려간 모습을 볼수 있음 */
+}
+main .login_wrap h1{
+    width: 135px; height: 26px;
+    background: /*yellow*/ url(../images/m_sp.png) -316px -103px;
+    margin: 30px auto 50px; /* 로고 이미지 - 가운데로 배치 + 여백 설정  */
+}
+main .login_wrap h1 a{width: 100%; height: 100%; display: block;} /* a가 커져서 이미지한테도 클릭이 가능해짐 */
+main .login_wrap h1 a .blind{display: none;} /* 네이버 로고이미지가 보이니깐 글자는 숨긴것 */
+main .login_wrap .login_inner{}
+main .login_wrap .login_inner #login_frm{}
+
+main .login_wrap .login_inner #login_frm .id_pw_wrap{
+    border: 1px solid #ddd; border-radius: 8px;
+    display: flex; flex-flow: column nowrap; /* 테두리 밖으로 나가고 아이디, 비밀번호 밑으로 떨어져 있는 형태  -> 이유 ) 부모 위로 튀어나와서 그런것 -> float 사용해서 설정해서 정리하기*/
+    overflow:hidden; /* 안에서만 보여라  */
+}
+main .login_wrap .login_inner #login_frm .id_pw_wrap input {padding: 16px 10px;} /* 공통선택으로 크기 값을 준것 - 입력창 넓이 설정이 되었음  */
+main .login_wrap .login_inner #login_frm .id_pw_wrap input[name=user_id]{
+    border: 1px solid #ddd; 
+    
+}
+main .login_wrap .login_inner #login_frm .id_pw_wrap input[name=user_pw]{}
+main .login_wrap .login_inner #login_frm .error_msg{
+    color: #f00; font-size: 0.81rem; padding: 10px 0; line-height: 1.4; /* 경고메세지문구 디자인 */
+}
+main .login_wrap .login_inner #login_frm #login_btn{
+    background: #aaa; color: #fff; width: 100%; height: 50px;
+    border-radius: 6px; /* 로그인 버튼 디자인  */
+}
+main .login_wrap .login_inner #login_frm .login_chk{
+    margin-top: 20px 0;
+}
+main .login_wrap .login_inner #login_frm .login_chk #chk_state{}
+main .login_wrap .login_inner #login_frm .login_chk label{
+    font-size: 0.91rem;
+}
+
+main .login_wrap .search_join_wrap{text-align: center;}
+main .login_wrap .search_join_wrap a{
+    font-size: 0.91rem;
+}
+/* 회원가입  */
+main .login_wrap .search_join_wrap a:last-child {color:#03c75a;}
