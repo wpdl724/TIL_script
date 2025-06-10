@@ -1,0 +1,21 @@
+main {
+    width:420px; height:800px; 
+    background: ;
+    margin: 0 auto;
+}
+main h1{ 
+    padding: 30px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+main ul{
+    padding: 50px;
+}
+main ul li{margin: 10px;}
+main ul li span{
+}
+main ul li .del_btn{background:#fff; padding:4px; font-size:0.75rem;}
+main .input_btn{display:flex; justify-content: space-between; align-items: center;}
+main .input_btn .to{}
+main .input_btn .to::placeholder{color: #eee;}

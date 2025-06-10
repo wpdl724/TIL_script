@@ -94,6 +94,6 @@ for (let i in user){
     console.log(i);
     console.log(user[i]);
 }
-for(let i of li){
+for(let i of li){ //querySelectorAll로 생성산 다수 li변수 접근
     console.log(i)
 }

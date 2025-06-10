@@ -1,3 +1,16 @@
+/* 글꼴 연결 @font-face 애플고딕 */
+@font-face {
+    font-family:appleB;
+    src: url(../fonts/AppleSDGothicNeoB.ttf);
+}
+@font-face {
+    font-family: appleL;
+    src: url(../fonts/AppleSDGothicNeoL.ttf);
+}
+@font-face {
+    font-family: appleR;
+    src: url(../fonts/AppleSDGothicNeoR.ttf);
+}
 /* 모든 태그들에 대한 공통 초기값 세팅 */
 html,body,h1,h2,h3,h4,h5,h6,
 dl,dt,dd,ol,ul,li,p,blockquote,hr,div,video,address,
@@ -8,8 +21,8 @@ table,thead,tbody,tfoot,tr,td,th {
     margin:0; padding:0; box-sizing:border-box;
     line-height:1; letter-spacing: -0.02em; letter-spacing:0; word-spacing: 0;
     font-size:1em; font-weight:400; font-style:normal;
-    color:#000;
-    font-family: 'pretendard', sans-serif;
+    color:#000; 
+    font-family: 'appleR', sans-serif;
 }
 /* 개별 태그 초기값 */
 a {text-decoration:none;}
