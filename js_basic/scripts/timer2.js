@@ -5,7 +5,7 @@ slideContainer.style.transition = `transform 0.3s` //옆으로 슬라이드 될�
 console.log(slideContainer);
 const slideTimer = setInterval(()=>{
     num--;
-    if(num>0){num=3}/* 0으로 만들어라 */
+    if(num<0){num=3}/* 0으로 만들어라 */
     slideContainer.style.transform = `translateX(${400*num}px)`
     console.log(`현재 num:${num}, x축값:${400*num}`)
 },3000)
