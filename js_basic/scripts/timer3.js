@@ -67,12 +67,13 @@ function startCountDownFunc(){
     const startCountDown = setInterval(()=>{
         if(num < 0){
             clearInterval(startCountDown)//타이머 종료
-            console.log('종료');
+            //console.log('종료');
+            alert('종료!')
         }else{
             console.log(num);
+            saleTimer.textContent = num;
             num--;
         }
     },1000)
-
 }
 saleBtn.addEventListener('click', startCountDownFunc)
