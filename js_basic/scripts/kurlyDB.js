@@ -1,0 +1,88 @@
+const kurlyDB = [
+    {
+        src:'./images/kurly_001.jpg',
+        name:'[해태] 여름 시즌 한정 트로피컬 에디션 간식 4종 (택1)',
+        summary: '새콤달콤한 여름맛 간식',
+        price:3580,
+        sale:7,
+        review:154,
+    },{
+        src:'./images/kurly_002.jpg',
+        name:'[피자로빈슨] 뉴욕 메가 슬라이스 피자 페퍼로니',
+        summary: '짭조름한 페퍼로니가 듬뿍',
+        price:5500,
+        sale:20,
+        review:18,
+    },{
+        src: './images/kurly_003.jpg',
+        name: '[청정원] 안주야 직화 불막창',
+        summary: '불맛 가득한 매콤한 막창',
+        price:7900,
+        sale:10,
+        review:87,
+    },{
+        src: './images/kurly_004.jpg',
+        name: '[오뚜기] 진라면 매운맛 (5입)',
+        summary: '언제 먹어도 맛있는 국민 라면',
+        price:3480,
+        sale:5,
+        review:321,
+    },{
+        src: './images/kurly_005.jpg',
+        name: '[프레시지] 부대찌개 밀키트 (2인분)',
+        summary: '간편하게 즐기는 푸짐한 한끼',
+        price:9800,
+        sale:15,
+        review:104,
+    },{
+        src: './images/kurly_006.jpg',
+        name: '[서울우유] 멸균우유 1000ml',
+        summary: '고소하고 깔끔한 맛의 멸균 우유',
+        price:2100,
+        sale:0,
+        review:45,
+    },{
+        src: './images/kurly_007.jpg',
+        name: '[빙그레] 바나나맛 우유 240ml',
+        summary: '달콤한 추억의 바나나맛',
+        price:1300,
+        sale:2,
+        review:200,
+    },{
+        src: './images/kurly_008.jpg',
+        name: '[마켓컬리 단독] 무농약 샐러드 믹스 200g',
+        summary: '신선한 채소로 건강한 한끼',
+        price:4980,
+        sale:10,
+        review:66,
+    },{
+        src: './images/kurly_009.jpg',
+        name: '[CJ] 햇반 컵밥 불고기덮밥',
+        summary: '든든하고 간편한 한끼',
+        price:3500,
+        sale:12,
+        review:110,
+    },{
+        src: './images/kurly_010.jpg',
+        name: '[풀무원] 얇은피 꽉찬속 김치만두',
+        summary: '속이 꽉 찬 김치만두',
+        price:5980,
+        sale:8,
+        review:239,
+    },{
+        src: './images/kurly_011.jpg',
+        name: '[비비고] 사골곰탕 500g',
+        summary: '진하게 우려낸 사골 국물',
+        price:3200,
+        sale:5,
+        review:173,
+    },{
+        src: './images/kurly_012.jpg',
+        name: '[델몬트] 오렌지 100% 주스 1.5L',
+        summary: '상큼한 과즙이 가득한 오렌지 주스',
+        price:5980,
+        sale:10,
+        review:89,
+    }
+    
+]
