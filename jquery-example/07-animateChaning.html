@@ -32,5 +32,19 @@
     <p>최대 50% 할인 이벤트!</p>
     <button id="animateBtn" type="button">자세히 보기</button>
   </div>
+  <script>
+
+    const $bnr = $('#promoBanner');
+    console.log($bnr);
+    //배너에 마우스 올릴 시 다양한 애니메이션이 순차적으로 실행되기
+    $bnr.mouseover(function(){
+      $(this)
+        .animate({width:'650px',padding:'40px'},500)
+        .animate({borderRadius:'30px'},500)
+        .animate({left:'20px',top:'30px'},1000)
+        .animate({backgroudColor:'#db8f87'},1000)
+
+    })
+  </script>
 </body>
 </html>
